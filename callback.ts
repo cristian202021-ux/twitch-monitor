@@ -22,11 +22,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res
         .status(200)
         .setHeader('content-type', 'text/html; charset=utf-8')
-        .send(`<!doctype html><meta charset="utf-8"><body style="font-family:system-ui;margin:40px">
-          <h2>¡Streamer autorizado! ✅</h2>
-          <p>${user.display_name} (@${user.login}) quedó registrado.</p>
-          <p>Puedes cerrar esta pestaña.</p>
-        </body>`);
+        .send(`<!doctype html><meta charset="utf-8">
+          <body style="font-family:system-ui;margin:40px">
+            <h2>¡Streamer autorizado! ✅</h2>
+            <p>${user.display_name} (@${user.login}) quedó registrado.</p>
+            <p>Puedes cerrar esta pestaña.</p>
+          </body>`);
     }
 
     const slotId = state;
